@@ -1,0 +1,54 @@
+package com.app.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import com.app.dto.JobPostResponse;
+import com.app.pojos.JobPost;
+
+@Repository
+public interface JobPostRepository extends JpaRepository<JobPost, Integer> {
+
+//	JobType findByJobType(JobTypeEnum jobType);
+	/*
+	 * select * from job_post_tbl where id IN (select job_location_id from
+	 * job_location where city_id=(select city_id from city_tbl where
+	 * city_name='Nasik'));
+	 */
+	
+	 
+	//@Query("select j from JobPost j where j.jobLocationId.city.cityName=:city")
+	
+	
+	
+	//@Query("select j from JobPost j where j.jobLocationId.city.cityName=:city")
+	//List<JobPost> findByJobLocation(@Param("city")String city);
+	
+	
+	/*
+	 * @Query(value = "CALL search_by_city(:cityId );", nativeQuery = true)
+	 * List<JobPost> findByJobLocation(@Param("cityId") int cityId);
+	 */
+	
+	  @Query("select j from JobPost j where j.jobLocationId.city.id=:cityId")
+	  List<JobPost> findByJobLocation(@Param("cityId")int cityId);
+	  
+	  //@Query("select j from JobPost j order by j.createdDate desc limit 5",nativeQuery = true)
+	  @Query(value = "CALL default_jobs(:num);", nativeQuery = true)
+	  List<JobPost>	findByCreatedDate(@Param("num")int num);
+	  
+	  @Query(nativeQuery = true, value = "SELECT * FROM job_post_tbl j ORDER BY created_date DESC LIMIT :num")
+	  List<JobPost> getLatestJobs(@Param("num")int num);
+	  
+	  @Query("select j from JobPost j where j.jobTypeId.id=:jobType")
+	  List<JobPost> findByJobType(@Param("jobType")int jobType);
+	  
+	  @Query("select j from JobPost j where j.componyId.companyId=:id")
+	  List<JobPost> findByComponyId(@Param("id") int id);
+	  
+	 
+}

@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Mar 30 10:35:43 IST 2022
+org.eclipse.jst.jee.server\:OnlineJobPortal=D\:\\Pushkaraj\\software\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\OnlineJobPortal
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\ADMIN\\.m2\\repository\\org\\springframework\\spring-web\\5.3.15\\spring-web-5.3.15.jar=D\:\\Pushkaraj\\software\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\OnlineJobPortal\\WEB-INF\\lib\\spring-web-5.3.15.jar
+org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\ADMIN\\.m2\\repository\\org\\apache\\tomcat\\embed\\tomcat-embed-el\\9.0.56\\tomcat-embed-el-9.0.56.jar=D\:\\Pushkaraj\\software\\sts-bundle\\pivotal-tc-server\\instances\\base-instance\\wtpwebapps\\OnlineJobPortal\\WEB-INF\\lib\\tomcat-embed-el-9.0.56.jar

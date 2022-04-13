@@ -1,0 +1,22 @@
+package com.app.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.app.pojos.JobSeeker;
+@Repository
+public interface JobSeekerRepository extends JpaRepository<JobSeeker, Integer>{
+
+	//add a method to add the education details
+	//Education save(Education education);
+
+//	//find education details by jobseeker id 
+//	@Query("SELECT j FROM JobSeeker j WHERE j.educationDetails.jobSeekerId = ?1")
+//	List<Education> findByEducationDetails(int jobSeekerId);
+	//Education save(Education education);
+//	//add a method to find Jobseeker By Email ID
+//	boolean findByEmailId(String emailId);
+	
+	
+
+}

@@ -1,0 +1,92 @@
+.profile-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.profile-parent{
+    display: flex;
+    align-items: center;
+     width: 100%;
+}
+
+.profile-details-name{
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.profile-details-role{
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0  24px 0;
+}
+
+.profile-details-role h1{
+    font-size: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.primary-text{
+    color: darksalmon;
+}
+
+.profile-role-tagline{
+    font-size: 20px;
+    margin: 5px 0 0 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.profile-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+.profile-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 0 0;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    margin: 0 30px 0 0;
+}
+.profile-picture-background{
+    height: 92%;
+    width: 92%;
+    background-image: url(../../../public/IMG_20220313_005541.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.profile-picture-background:hover{
+    transform: scale(1.07);
+    transition: 1s ease-out;
+
+}
+
+.colz .colz-icon i{
+    color:coral;
+    padding: 8px;
+    padding-left: 0px;
+}
+
+.colz .colz-icon i:hover{
+    transform: scale(1.5);
+}
+
+@media screen and (max-width : 910px){
+    .profile-picture{
+        margin: 0 0 0 80px;
+    }
+    .profile-details-name{
+        font-size: 25px;
+    }
+    .profile-details-role .primary-text{
+        font-size: 12px;
+    }   
+}

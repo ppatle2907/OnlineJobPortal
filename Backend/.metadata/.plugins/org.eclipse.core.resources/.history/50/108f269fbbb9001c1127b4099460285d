@@ -1,0 +1,8 @@
+package com.app.dto;
+
+import java.util.ArrayList;
+
+public class SearchDTO {
+	private ArrayList<Integer> list;	
+	private Integer city;
+}

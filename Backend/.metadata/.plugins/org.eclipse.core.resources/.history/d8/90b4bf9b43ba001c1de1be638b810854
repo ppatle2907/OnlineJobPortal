@@ -1,0 +1,20 @@
+package com.app.services;
+
+import java.util.List;
+
+import com.app.dto.CompanyRegistration;
+import com.app.dto.JobPostDto;
+import com.app.pojos.JobPost;
+
+public interface ICompanyService {
+	//add a method to add Company details
+	String companyRegistration(CompanyRegistration register);
+	
+	//methdo to post job
+	String jobPost(JobPostDto jobPost, int id);
+
+	List<JobPost> getAllPostedJobs(int id);
+
+	List<String> getEmail();
+
+}
